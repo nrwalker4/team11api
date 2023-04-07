@@ -16,6 +16,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+System.Console.WriteLine("I hate pa3, literally ruined 321 ");
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
