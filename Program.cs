@@ -16,7 +16,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-System.Console.WriteLine("I hate pa3, literally ruined 321 ");
+System.Console.WriteLine("I made a change here on 4/7/23 we need to pull this data on Monday so that we can get this boat sailing! blah b;ah blah ");
 
 app.UseHttpsRedirection();
 
