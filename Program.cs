@@ -23,6 +23,10 @@ System.Console.WriteLine("Test code 4/10/23");
 System.Console.WriteLine("Will this string help Addie or will she have to talk to Jeff find out on the nffext episode of MIS321");
 System.Console.WriteLine("It did in fact help Addie!!!!");
 
+<<<<<<< HEAD
+=======
+System.Console.WriteLine("lfg bitchez i got it to work");
+>>>>>>> b5fab46485864eb942a61d8dd470fcf835a5b593
 
 app.UseHttpsRedirection();
 
