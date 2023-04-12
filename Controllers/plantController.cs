@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using team11api.Models;
+using team11api.Databases;
+using team11api.Interfaces;
 
 namespace team11api.Controllers
 {
@@ -13,9 +16,11 @@ namespace team11api.Controllers
     {
         // GET: api/plant
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Plant> Get()
         {
-            return new string[] { "value1", "value2" };
+            IReadAllPlants readPlants = new ReadAllPlants();
+            List<Plant> myPlants = readPlants.GetAllPlants();
+            return myPlants;
         }
 
         // GET: api/plant/5
