@@ -1,7 +1,6 @@
 
 namespace team11api
 
-
 {
     public class ConnectionString
     {
