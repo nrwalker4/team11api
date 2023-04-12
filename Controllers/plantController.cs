@@ -12,9 +12,9 @@ namespace team11api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class plantController : ControllerBase
+    public class PlantController : ControllerBase
     {
-        // GET: api/plant
+        // GET: api/Plant
         [HttpGet]
         public List<Plant> Get()
         {
@@ -23,26 +23,26 @@ namespace team11api.Controllers
             return myPlants;
         }
 
-        // GET: api/plant/5
+        // GET: api/Plant/5
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/plant
+        // POST: api/Plant
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT: api/plant/5
+        // PUT: api/Plant/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE: api/plant/5
+        // DELETE: api/Plant/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
