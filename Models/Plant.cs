@@ -1,3 +1,6 @@
+using team11api.Interfaces;
+using team11api.Databases;
+
 namespace team11api.Models
 {
     public class Plant
@@ -16,9 +19,10 @@ namespace team11api.Models
         public string Description{get;set;}
         public int InStock{get;set;}
         public bool Deleted{get;set;}
+        public ISavePlant Save{get;set;}
 
         public Plant(){
-
+            Save = new SavePlant();
         }
     }
 }

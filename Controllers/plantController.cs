@@ -32,20 +32,37 @@ namespace team11api.Controllers
 
         // POST: api/Plant
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Plant newPlant)
         {
+            System.Console.WriteLine("Inside the post");
+            
+            Plant addedPlant = new Plant(){PlantId=newPlant.PlantId,PlantName=newPlant.PlantName,PlantType=newPlant.PlantType,Lifespan=newPlant.Lifespan,
+            IndoorOutdoor=newPlant.IndoorOutdoor,SunExposure=newPlant.SunExposure,Soil=newPlant.Soil,WateringFreq=newPlant.WateringFreq,ExternalLink=newPlant.ImageLink,
+            InStock=newPlant.InStock,Deleted=newPlant.Deleted};
+            
+            addedPlant.Save.CreatePlant(addedPlant);
         }
 
         // PUT: api/Plant/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Plant myPlant)
         {
+            System.Console.WriteLine("Inside the put");
+
+            Plant addedPlant = new Plant(){PlantId=myPlant.PlantId,PlantName=myPlant.PlantName,PlantType=myPlant.PlantType,Lifespan=myPlant.Lifespan,
+            IndoorOutdoor=myPlant.IndoorOutdoor,SunExposure=myPlant.SunExposure,Soil=myPlant.Soil,WateringFreq=myPlant.WateringFreq,ExternalLink=myPlant.ImageLink,
+            InStock=myPlant.InStock,Deleted=myPlant.Deleted};
+
+            addedPlant.Save.SavePlant(addedPlant);
         }
 
         // DELETE: api/Plant/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            System.Console.WriteLine("Inside the delete");
+            IDeletePlant deletePlant = new DeletePlant();
+            deletePlant.DeletePlant(id);
         }
     }
 }

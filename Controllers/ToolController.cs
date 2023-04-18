@@ -32,20 +32,36 @@ namespace team11api.Controllers
 
         // POST: api/Tool
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Tool myTool)
         {
+            System.Console.WriteLine("Inside the post");
+
+            Tool addedTool = new Tool(){ToolId=myTool.ToolId,ToolName=myTool.ToolName,InStock=myTool.InStock,Price=myTool.Price,Description=myTool.Description,
+            ImageLink=myTool.ImageLink,Deleted=myTool.Deleted};
+
+            addedTool.Save.CreateTool(myTool);
+
         }
 
         // PUT: api/Tool/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Tool myTool)
         {
+            System.Console.WriteLine("Inside the post");
+
+            Tool addedTool = new Tool(){ToolId=myTool.ToolId,ToolName=myTool.ToolName,InStock=myTool.InStock,Price=myTool.Price,Description=myTool.Description,
+            ImageLink=myTool.ImageLink,Deleted=myTool.Deleted};
+
+            addedTool.Save.SaveTool(myTool);
         }
 
         // DELETE: api/Tool/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            System.Console.WriteLine("Inside the delete");
+            IDeleteTool deleteTool = new DeleteTool();
+            deleteTool.DeleteTool(id);
         }
     }
 }

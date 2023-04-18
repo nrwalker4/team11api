@@ -1,3 +1,6 @@
+using team11api.Interfaces;
+using team11api.Databases;
+
 namespace team11api.Models
 {
     public class Tool
@@ -9,8 +12,9 @@ namespace team11api.Models
         public string Description{get;set;}
         public string ImageLink{get;set;}
         public bool Deleted{get;set;}
+        public ISaveTool Save{get;set;}
         public Tool(){
-
+            Save = new SaveTool();
         }
 
     }

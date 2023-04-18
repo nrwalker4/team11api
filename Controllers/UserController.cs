@@ -33,20 +33,35 @@ namespace team11api.Controllers
 
         // POST: api/User
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] User myUser)
         {
+            System.Console.WriteLine("Inside the post");
+
+            User addedUser = new User(){Username=myUser.Username,UserPassword=myUser.UserPassword,Email=myUser.Email,FirstName=myUser.FirstName,
+            LastName=myUser.LastName,IsAdmin=myUser.IsAdmin,Deleted=myUser.Deleted};
+
+            addedUser.Save.CreateUser(addedUser);
         }
 
         // PUT: api/User/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] User myUser)
         {
+            System.Console.WriteLine("Inside the put");
+
+            User addedUser = new User(){Username=myUser.Username,UserPassword=myUser.UserPassword,Email=myUser.Email,FirstName=myUser.FirstName,
+            LastName=myUser.LastName,IsAdmin=myUser.IsAdmin,Deleted=myUser.Deleted};
+
+            addedUser.Save.SaveUser(addedUser);
         }
 
         // DELETE: api/User/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(string username)
         {
+            System.Console.WriteLine("Inside the delete");
+            IDeleteUser deleteUser = new DeleteUser();
+            deleteUser.DeleteUser(username);
         }
     }
 }

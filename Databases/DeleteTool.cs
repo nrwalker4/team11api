@@ -6,9 +6,9 @@ using team11api.Models;
 
 namespace team11api.Databases
 {
-    public class DeletePlant : IDeletePlant
+    public class DeleteTool : IDeleteTool
     {
-        void IDeletePlant.DeletePlant(int id)
+        void IDeleteTool.DeleteTool(int id)
         {
             ConnectionString myConnection = new ConnectionString();
             string cs = myConnection.cs;
@@ -16,15 +16,14 @@ namespace team11api.Databases
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE plants set deleted = @deleted WHERE plantId = @plantId";
+            string stm = @"UPDATE tools set deleted = @deleted WHERE toolId = @toolId";
 
             using var cmd = new MySqlCommand(stm,con);
-            cmd.CommandText = @"UPDATE plants set deleted = @deleted WHERE plantId = @plantId";
-            cmd.Parameters.AddWithValue("@plantId",id);
+            cmd.CommandText = @"UPDATE tools set deleted = @deleted WHERE toolId = @toolId";
+            cmd.Parameters.AddWithValue("@toolId",id);
             cmd.Parameters.AddWithValue("@deleted",true);
             cmd.Prepare();
             cmd.ExecuteNonQuery();
         }
-
     }
 }
