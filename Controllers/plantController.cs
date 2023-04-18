@@ -24,7 +24,7 @@ namespace team11api.Controllers
         }
 
         // GET: api/Plant/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetPlant")]
         public string Get(int id)
         {
             return "value";

@@ -30,15 +30,18 @@ namespace team11api.Databases
                 {
                     PlantId=rdr.GetInt32(0),
                     PlantName = rdr.GetString(1),
-                    Lifespan=rdr.GetString(2),
-                    IndoorOutdoor=rdr.GetString(3),
-                    SunExposure=rdr.GetString(4),
-                    Soil=rdr.GetString(5),
-                    WateringFreq=rdr.GetString(6),
-                    ExternalLink=rdr.GetString(7),
-                    ImageLink=rdr.GetString(8),
-                    ProductId=rdr.GetInt32(9),
-                    Deleted=rdr.GetBoolean(10)
+                    PlantType=rdr.GetString(2),
+                    Lifespan=rdr.GetString(3),
+                    IndoorOutdoor=rdr.GetString(4),
+                    SunExposure=rdr.GetString(5),
+                    Soil=rdr.GetString(6),
+                    WateringFreq=rdr.GetString(7),
+                    ExternalLink=rdr.GetString(8),
+                    ImageLink=rdr.GetString(9),
+                    Price=rdr.GetDecimal(10),
+                    Description=rdr.GetString(11),
+                    InStock=rdr.GetInt32(12),
+                    Deleted=rdr.GetBoolean(13)
                 };
                 allPlants.Add(temp);
             }

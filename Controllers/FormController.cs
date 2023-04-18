@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using team11api.Models;
+using team11api.Databases;
+using team11api.Interfaces;
 
 namespace team11api.Controllers
 {
@@ -13,13 +16,15 @@ namespace team11api.Controllers
     {
         // GET: api/Form
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Form> Get()
         {
-            return new string[] { "value1", "value2" };
+            IReadAllForms getForms = new ReadAllForms();
+            List<Form> myForms = getForms.GetAllForms();
+            return myForms;
         }
 
         // GET: api/Form/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetForm")]
         public string Get(int id)
         {
             return "value";

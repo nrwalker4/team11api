@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using team11api.Models;
+using team11api.Databases;
+using team11api.Interfaces;
+
 
 namespace team11api.Controllers
 {
@@ -13,13 +17,15 @@ namespace team11api.Controllers
     {
         // GET: api/Order
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Order> Get()
         {
-            return new string[] { "value1", "value2" };
+            IReadAllOrders readOrders = new ReadAllOrders();
+            List<Order> myOrders = readOrders.GetAllOrders();
+            return myOrders;
         }
 
         // GET: api/Order/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetOrder")]
         public string Get(int id)
         {
             return "value";
