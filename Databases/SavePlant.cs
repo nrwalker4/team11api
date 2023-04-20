@@ -48,12 +48,12 @@ namespace team11api.Databases
             con.Open();
 
             string stm = @"UPDATE plants set plantName=@plantName, plantType=@plantType, lifespan=@lifespan, indoorOutdoor=@indoorOutdoor, sunExposure=@sunExposure, 
-            soil=@soil, wateringFreq=@wateringFreq, externalLink=@externalLink, imageLink=@imageLink, price=@price, plantDescription=@plantDescription, inStock=@inStock";
+            soil=@soil, wateringFreq=@wateringFreq, externalLink=@externalLink, imageLink=@imageLink, price=@price, plantDescription=@plantDescription, inStock=@inStock WHERE plantId = @plantId";
             
             using var cmd = new MySqlCommand(stm,con);
 
             cmd.CommandText=@"UPDATE plants set plantName=@plantName, plantType=@plantType, lifespan=@lifespan, indoorOutdoor=@indoorOutdoor, sunExposure=@sunExposure, 
-            soil=@soil, wateringFreq=@wateringFreq, externalLink=@externalLink, imageLink=@imageLink, price=@price, plantDescription=@plantDescription, inStock=@inStock";
+            soil=@soil, wateringFreq=@wateringFreq, externalLink=@externalLink, imageLink=@imageLink, price=@price, plantDescription=@plantDescription, inStock=@inStock WHERE plantId = @plantId";
             cmd.Parameters.AddWithValue("@plantName",myPlant.PlantName);
             cmd.Parameters.AddWithValue("@plantType",myPlant.PlantType);
             cmd.Parameters.AddWithValue("@lifespan",myPlant.Lifespan);

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Addie Ziegler\\OneDrive - The University of Alabama\\Spring_2023\\MIS_321\\GROUP_PROJECT\\api\\team11api\\team11api.csproj": {}
+    "/Users/rebeccaweiner/Documents/repos/mis321/team11/api/team11api/team11api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Addie Ziegler\\OneDrive - The University of Alabama\\Spring_2023\\MIS_321\\GROUP_PROJECT\\api\\team11api\\team11api.csproj": {
+    "/Users/rebeccaweiner/Documents/repos/mis321/team11/api/team11api/team11api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Addie Ziegler\\OneDrive - The University of Alabama\\Spring_2023\\MIS_321\\GROUP_PROJECT\\api\\team11api\\team11api.csproj",
+        "projectUniqueName": "/Users/rebeccaweiner/Documents/repos/mis321/team11/api/team11api/team11api.csproj",
         "projectName": "team11api",
-        "projectPath": "C:\\Users\\Addie Ziegler\\OneDrive - The University of Alabama\\Spring_2023\\MIS_321\\GROUP_PROJECT\\api\\team11api\\team11api.csproj",
-        "packagesPath": "C:\\Users\\Addie Ziegler\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Addie Ziegler\\OneDrive - The University of Alabama\\Spring_2023\\MIS_321\\GROUP_PROJECT\\api\\team11api\\obj\\",
+        "projectPath": "/Users/rebeccaweiner/Documents/repos/mis321/team11/api/team11api/team11api.csproj",
+        "packagesPath": "/Users/rebeccaweiner/.nuget/packages/",
+        "outputPath": "/Users/rebeccaweiner/Documents/repos/mis321/team11/api/team11api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Addie Ziegler\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/rebeccaweiner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -57,7 +57,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -69,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.405/RuntimeIdentifierGraph.json"
         }
       }
     }

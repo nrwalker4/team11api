@@ -41,12 +41,12 @@ namespace team11api.Databases
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE tools set toolName=@toolName, inStock=@inStock, price=@price, toolDescription=@toolDescription, imageLink=@imageLink, deleted=@deleted";
+            string stm = @"UPDATE tools set toolName=@toolName, inStock=@inStock, price=@price, toolDescription=@toolDescription, imageLink=@imageLink, deleted=@deleted WHERE plantId = @plantId";
 
             using var cmd = new MySqlCommand(stm,con);
 
             //prepared statements
-            cmd.CommandText=@"UPDATE tools set toolName=@toolName, inStock=@inStock, price=@price, toolDescription=@toolDescription, imageLink=@imageLink, deleted=@deleted";
+            cmd.CommandText=@"UPDATE tools set toolName=@toolName, inStock=@inStock, price=@price, toolDescription=@toolDescription, imageLink=@imageLink, deleted=@deleted WHERE plantId = @plantId";
             cmd.Parameters.AddWithValue("@toolName",myTool.ToolName);
             cmd.Parameters.AddWithValue("@inStock",myTool.InStock);
             cmd.Parameters.AddWithValue("@price",myTool.Price);
