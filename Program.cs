@@ -30,14 +30,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-System.Console.WriteLine("I made a change here on 4/7/23 we need to pull this data on Monday so that we can get this boat sailing!");
-
-System.Console.WriteLine("Test code 4/10/23");
-
-System.Console.WriteLine("Will this string help Addie or will she have to talk to Jeff find out on the nffext episode of MIS321");
-System.Console.WriteLine("It did in fact help Addie!!!!");
-
-System.Console.WriteLine("lfg bitchez i got it to work");
 
 app.UseHttpsRedirection();
 
