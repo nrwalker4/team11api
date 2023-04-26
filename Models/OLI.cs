@@ -1,3 +1,6 @@
+using team11api.Interfaces;
+using team11api.Databases;
+
 namespace team11api.Models
 {
     public class OLI
@@ -8,10 +11,10 @@ namespace team11api.Models
         public int OrderId{get;set;}
         public int PlantId{get;set;}
         public int ToolId{get;set;}
+        public ISaveOLI Save{get;set;}
         public OLI(){
-            
+            Save = new SaveOLI();
         }
-
         //subtotal
     }
 }

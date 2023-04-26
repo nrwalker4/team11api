@@ -16,6 +16,5 @@ namespace team11api.Models
         public Tool(){
             Save = new SaveTool();
         }
-
     }
 }

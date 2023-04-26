@@ -32,8 +32,13 @@ namespace team11api.Controllers
 
         // POST: api/Form
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Form myForm)
         {
+            System.Console.WriteLine("Inside the post");
+            Form newForm = new Form(){FormId=myForm.FormId,Username=myForm.Username,IndoorOutdoor=myForm.IndoorOutdoor,SunExposure=myForm.SunExposure,Soil=myForm.Soil};
+
+            newForm.Save.CreateForm(newForm);
+            System.Console.WriteLine(newForm);
         }
 
         // PUT: api/Form/5

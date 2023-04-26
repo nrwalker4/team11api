@@ -1,3 +1,6 @@
+using team11api.Interfaces;
+using team11api.Databases;
+
 namespace team11api.Models
 {
     public class Form
@@ -7,8 +10,9 @@ namespace team11api.Models
         public string IndoorOutdoor{get;set;}
         public string SunExposure{get;set;}
         public string Soil{get;set;}
+        public ISaveForm Save{get;set;}
         public Form(){
-            
+            Save = new SaveForm();
         }
     }
 }

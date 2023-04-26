@@ -33,8 +33,13 @@ namespace team11api.Controllers
 
         // POST: api/Order
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Order newOrder)
         {
+            System.Console.WriteLine("Inside the post");
+            Order addedOrder = new Order(){OrderId=newOrder.OrderId,Date=newOrder.Date,Username=newOrder.Username};
+
+            addedOrder.Save.CreateOrder(addedOrder);
+            System.Console.WriteLine(addedOrder);
         }
 
         // PUT: api/Order/5
