@@ -37,7 +37,7 @@ namespace team11api.Controllers
         {
             System.Console.WriteLine("Inside the post");
             OLI newOLI = new OLI(){OLId=myOLI.OLId,ItemQty=myOLI.ItemQty,UnitPrice=myOLI.UnitPrice,OrderId=myOLI.OrderId,PlantId=myOLI.PlantId,ToolId=myOLI.ToolId};
-            
+
             newOLI.Save.CreateOLI(newOLI);
             System.Console.WriteLine(newOLI);
         }

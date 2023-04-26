@@ -18,7 +18,8 @@ namespace team11api.Databases
             con.Open();
 
             //read command with all data
-            string stm = @"SELECT * FROM orderlineitem";
+            // string stm = @"SELECT * FROM orderlineitem";
+            string stm = @"SELECT oLID, itemQty, unitPrice, orderID, IFNULL(toolID,-1) as toolID, IFNULL(plantID, -1) as plantID FROM orderlineitem";
             using var cmd = new MySqlCommand(stm,con);
 
             using MySqlDataReader rdr = cmd.ExecuteReader();
