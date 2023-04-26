@@ -4,6 +4,6 @@ namespace team11api.Interfaces
 {
     public interface ISaveOLI
     {
-        public void CreateOLI(OLI myOLI);
+        void CreateOLI(OLI myOLI);
     }
 }

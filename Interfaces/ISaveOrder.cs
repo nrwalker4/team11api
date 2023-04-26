@@ -4,6 +4,6 @@ namespace team11api.Interfaces
 {
     public interface ISaveOrder
     {
-        public void CreateOrder(Order myOrder);
+        void CreateOrder(Order myOrder);
     }
 }

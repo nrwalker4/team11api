@@ -4,6 +4,6 @@ namespace team11api.Interfaces
 {
     public interface ISaveForm
     {
-        public void CreateForm(Form myForm);
+        void CreateForm(Form myForm);
     }
 }

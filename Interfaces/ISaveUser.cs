@@ -4,7 +4,7 @@ namespace team11api.Interfaces
 {
     public interface ISaveUser
     {
-        public void CreateUser(User myUser);
-        public void SaveUser(User myUser);
+        void CreateUser(User myUser);
+        void SaveUser(User myUser);
     }
 }

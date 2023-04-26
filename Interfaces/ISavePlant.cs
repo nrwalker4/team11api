@@ -4,7 +4,7 @@ namespace team11api.Interfaces
 {
     public interface ISavePlant
     {
-        public void CreatePlant(Plant myPlant);
-        public void SavePlant(Plant myPlant);
+        void CreatePlant(Plant myPlant);
+        void SavePlant(Plant myPlant);
     }
 }
