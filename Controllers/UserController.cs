@@ -45,7 +45,7 @@ namespace team11api.Controllers
 
         // PUT: api/User/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] User myUser)
+        public void Put(string id, [FromBody] User myUser)
         {
             System.Console.WriteLine("Inside the put");
 
