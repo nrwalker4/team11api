@@ -9197,19 +9197,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/kincaidkeating/.nuget/packages/": {}
+    "C:\\Users\\Addie Ziegler\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kincaidkeating/Desktop/SOURCE/spring23/sga/team11api/team11api.csproj",
+      "projectUniqueName": "C:\\Users\\Addie Ziegler\\OneDrive - The University of Alabama\\Spring_2023\\MIS_321\\GROUP_PROJECT\\api\\team11api\\team11api.csproj",
       "projectName": "team11api",
-      "projectPath": "/Users/kincaidkeating/Desktop/SOURCE/spring23/sga/team11api/team11api.csproj",
-      "packagesPath": "/Users/kincaidkeating/.nuget/packages/",
-      "outputPath": "/Users/kincaidkeating/Desktop/SOURCE/spring23/sga/team11api/obj/",
+      "projectPath": "C:\\Users\\Addie Ziegler\\OneDrive - The University of Alabama\\Spring_2023\\MIS_321\\GROUP_PROJECT\\api\\team11api\\team11api.csproj",
+      "packagesPath": "C:\\Users\\Addie Ziegler\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Addie Ziegler\\OneDrive - The University of Alabama\\Spring_2023\\MIS_321\\GROUP_PROJECT\\api\\team11api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/kincaidkeating/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Addie Ziegler\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -9264,7 +9264,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
