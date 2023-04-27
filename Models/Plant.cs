@@ -16,7 +16,7 @@ namespace team11api.Models
         public string ExternalLink{get;set;}
         public string ImageLink{get;set;}
         public decimal Price{get;set;}
-        public string Description{get;set;}
+        public string PlantDescription{get;set;}
         public int InStock{get;set;}
         public bool Deleted{get;set;}
         public ISavePlant Save{get;set;}

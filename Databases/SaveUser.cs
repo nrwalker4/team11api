@@ -42,12 +42,12 @@ namespace team11api.Databases
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE tools set username=@username,userPassword=@userPassword,email=@email,firstName=@firstName,lastName=@lastName,isAdmin=@isAdmin, deleted=@deleted WHERE username = @username";
+            string stm = @"UPDATE users set userPassword=@userPassword,email=@email,firstName=@firstName,lastName=@lastName,isAdmin=@isAdmin, deleted=@deleted WHERE username = @username";
 
             using var cmd = new MySqlCommand(stm,con);
 
             //prepared statements
-            cmd.CommandText=@"UPDATE tools set username=@username,userPassword=@userPassword,email=@email,firstName=@firstName,lastName=@lastName,isAdmin=@isAdmin, deleted=@deleted WHERE username = @username";
+            cmd.CommandText=@"UPDATE users set userPassword=@userPassword,email=@email,firstName=@firstName,lastName=@lastName,isAdmin=@isAdmin, deleted=@deleted WHERE username = @username";
             cmd.Parameters.AddWithValue("@username",myUser.Username);
             cmd.Parameters.AddWithValue("@userPassword",myUser.UserPassword);
             cmd.Parameters.AddWithValue("@email",myUser.Email);

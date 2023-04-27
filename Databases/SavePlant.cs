@@ -31,7 +31,7 @@ namespace team11api.Databases
             cmd.Parameters.AddWithValue("@externalLink",myPlant.ExternalLink);
             cmd.Parameters.AddWithValue("@imageLink",myPlant.ImageLink);
             cmd.Parameters.AddWithValue("@price",myPlant.Price);
-            cmd.Parameters.AddWithValue("@description",myPlant.Description);
+            cmd.Parameters.AddWithValue("@plantDescription",myPlant.PlantDescription);
             cmd.Parameters.AddWithValue("@inStock",myPlant.InStock);
 
             //execute prepare: will take parameters and statement and check for anything bad
@@ -54,6 +54,7 @@ namespace team11api.Databases
 
             cmd.CommandText=@"UPDATE plants set plantName=@plantName, plantType=@plantType, lifespan=@lifespan, indoorOutdoor=@indoorOutdoor, sunExposure=@sunExposure, 
             soil=@soil, wateringFreq=@wateringFreq, externalLink=@externalLink, imageLink=@imageLink, price=@price, plantDescription=@plantDescription, inStock=@inStock WHERE plantId = @plantId";
+            cmd.Parameters.AddWithValue("@plantId",myPlant.PlantId);
             cmd.Parameters.AddWithValue("@plantName",myPlant.PlantName);
             cmd.Parameters.AddWithValue("@plantType",myPlant.PlantType);
             cmd.Parameters.AddWithValue("@lifespan",myPlant.Lifespan);
@@ -64,7 +65,7 @@ namespace team11api.Databases
             cmd.Parameters.AddWithValue("@externalLink",myPlant.ExternalLink);
             cmd.Parameters.AddWithValue("@imageLink",myPlant.ImageLink);
             cmd.Parameters.AddWithValue("@price",myPlant.Price);
-            cmd.Parameters.AddWithValue("@description",myPlant.Description);
+            cmd.Parameters.AddWithValue("@plantDescription",myPlant.PlantDescription);
             cmd.Parameters.AddWithValue("@inStock",myPlant.InStock);
 
             cmd.Prepare();

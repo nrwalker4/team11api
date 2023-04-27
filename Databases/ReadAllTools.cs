@@ -31,7 +31,7 @@ namespace team11api.Databases
                     ToolName=rdr.GetString(1),
                     InStock=rdr.GetInt32(2),
                     Price=rdr.GetDecimal(3),
-                    Description=rdr.GetString(4),
+                    ToolDescription=rdr.GetString(4),
                     ImageLink=rdr.GetString(5),
                     Deleted=rdr.GetBoolean(6)
                 };

@@ -24,7 +24,7 @@ namespace team11api.Databases
             cmd.Parameters.AddWithValue("@toolName",myTool.ToolName);
             cmd.Parameters.AddWithValue("@inStock",myTool.InStock);
             cmd.Parameters.AddWithValue("@price",myTool.Price);
-            cmd.Parameters.AddWithValue("@description",myTool.Description);
+            cmd.Parameters.AddWithValue("@toolDescription",myTool.ToolDescription);
             cmd.Parameters.AddWithValue("@imageLink",myTool.ImageLink);
             cmd.Parameters.AddWithValue("@deleted",myTool.Deleted);
         
@@ -41,16 +41,17 @@ namespace team11api.Databases
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"UPDATE tools set toolName=@toolName, inStock=@inStock, price=@price, toolDescription=@toolDescription, imageLink=@imageLink, deleted=@deleted WHERE plantId = @plantId";
+            string stm = @"UPDATE tools set toolName=@toolName, inStock=@inStock, price=@price, toolDescription=@toolDescription, imageLink=@imageLink, deleted=@deleted WHERE toolId = @toolId";
 
             using var cmd = new MySqlCommand(stm,con);
 
             //prepared statements
-            cmd.CommandText=@"UPDATE tools set toolName=@toolName, inStock=@inStock, price=@price, toolDescription=@toolDescription, imageLink=@imageLink, deleted=@deleted WHERE plantId = @plantId";
+            cmd.CommandText=@"UPDATE tools set toolName=@toolName, inStock=@inStock, price=@price, toolDescription=@toolDescription, imageLink=@imageLink, deleted=@deleted WHERE toolId = @toolId";
+            cmd.Parameters.AddWithValue("@toolId",myTool.ToolId);
             cmd.Parameters.AddWithValue("@toolName",myTool.ToolName);
             cmd.Parameters.AddWithValue("@inStock",myTool.InStock);
             cmd.Parameters.AddWithValue("@price",myTool.Price);
-            cmd.Parameters.AddWithValue("@description",myTool.Description);
+            cmd.Parameters.AddWithValue("@toolDescription",myTool.ToolDescription);
             cmd.Parameters.AddWithValue("@imageLink",myTool.ImageLink);
             cmd.Parameters.AddWithValue("@deleted",myTool.Deleted);
         

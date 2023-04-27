@@ -14,8 +14,16 @@ namespace team11api.Databases
             using var con = new MySqlConnection(cs);
             con.Open();
 
-            string stm = @"INSERT INTO forms(indoorOutdoor, sunExposure, soil, username)
-            VALUES(@indoorOutdoor, @sunExposure, @soil, @username)";
+            string stm;
+
+            if(myForm.Username != "N/A"){
+                stm = @"INSERT INTO forms(indoorOutdoor, sunExposure, soil, username)
+                VALUES(@indoorOutdoor, @sunExposure, @soil, @username)";
+            }
+            else{
+                stm = @"INSERT INTO forms(indoorOutdoor, sunExposure, soil)
+                VALUES(@indoorOutdoor, @sunExposure, @soil)";
+            }
 
             using var cmd = new MySqlCommand(stm,con);
 

@@ -18,7 +18,8 @@ namespace team11api.Databases
             con.Open();
 
             //read command with all data
-            string stm = @"SELECT * FROM forms";
+
+            string stm = @"SELECT formID, indoorOutdoor, sunExposure, soil, IFNULL(username,'N/A') as username FROM forms";
             using var cmd = new MySqlCommand(stm,con);
 
             using MySqlDataReader rdr = cmd.ExecuteReader();
@@ -33,7 +34,6 @@ namespace team11api.Databases
                 };
                 allForms.Add(temp);
             }
-
            return allForms;
         }
     }

@@ -39,7 +39,7 @@ namespace team11api.Databases
                     ExternalLink=rdr.GetString(8),
                     ImageLink=rdr.GetString(9),
                     Price=rdr.GetDecimal(10),
-                    Description=rdr.GetString(11),
+                    PlantDescription=rdr.GetString(11),
                     InStock=rdr.GetInt32(12),
                     Deleted=rdr.GetBoolean(13)
                 };

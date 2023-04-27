@@ -38,7 +38,7 @@ namespace team11api.Controllers
             
             Plant addedPlant = new Plant(){PlantId=newPlant.PlantId,PlantName=newPlant.PlantName,PlantType=newPlant.PlantType,Lifespan=newPlant.Lifespan,
             IndoorOutdoor=newPlant.IndoorOutdoor,SunExposure=newPlant.SunExposure,Soil=newPlant.Soil,WateringFreq=newPlant.WateringFreq,ExternalLink=newPlant.ImageLink,
-            InStock=newPlant.InStock,Deleted=newPlant.Deleted};
+            PlantDescription=newPlant.PlantDescription,Price=newPlant.Price, InStock=newPlant.InStock,Deleted=newPlant.Deleted};
             
             addedPlant.Save.CreatePlant(addedPlant);
         }
@@ -51,7 +51,7 @@ namespace team11api.Controllers
 
             Plant addedPlant = new Plant(){PlantId=myPlant.PlantId,PlantName=myPlant.PlantName,PlantType=myPlant.PlantType,Lifespan=myPlant.Lifespan,
             IndoorOutdoor=myPlant.IndoorOutdoor,SunExposure=myPlant.SunExposure,Soil=myPlant.Soil,WateringFreq=myPlant.WateringFreq,ExternalLink=myPlant.ImageLink,
-            InStock=myPlant.InStock,Deleted=myPlant.Deleted};
+            PlantDescription=myPlant.PlantDescription,Price=myPlant.Price, InStock=myPlant.InStock,Deleted=myPlant.Deleted};
 
             addedPlant.Save.SavePlant(addedPlant);
         }

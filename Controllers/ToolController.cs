@@ -36,11 +36,10 @@ namespace team11api.Controllers
         {
             System.Console.WriteLine("Inside the post");
 
-            Tool addedTool = new Tool(){ToolId=myTool.ToolId,ToolName=myTool.ToolName,InStock=myTool.InStock,Price=myTool.Price,Description=myTool.Description,
+            Tool addedTool = new Tool(){ToolId=myTool.ToolId,ToolName=myTool.ToolName,InStock=myTool.InStock,Price=myTool.Price,ToolDescription=myTool.ToolDescription,
             ImageLink=myTool.ImageLink,Deleted=myTool.Deleted};
 
             addedTool.Save.CreateTool(myTool);
-
         }
 
         // PUT: api/Tool/5
@@ -49,7 +48,7 @@ namespace team11api.Controllers
         {
             System.Console.WriteLine("Inside the post");
 
-            Tool addedTool = new Tool(){ToolId=myTool.ToolId,ToolName=myTool.ToolName,InStock=myTool.InStock,Price=myTool.Price,Description=myTool.Description,
+            Tool addedTool = new Tool(){ToolId=myTool.ToolId,ToolName=myTool.ToolName,InStock=myTool.InStock,Price=myTool.Price,ToolDescription=myTool.ToolDescription,
             ImageLink=myTool.ImageLink,Deleted=myTool.Deleted};
 
             addedTool.Save.SaveTool(myTool);

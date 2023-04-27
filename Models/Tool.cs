@@ -9,7 +9,7 @@ namespace team11api.Models
         public string ToolName{get;set;}
         public int InStock{get;set;}
         public decimal Price{get;set;}
-        public string Description{get;set;}
+        public string ToolDescription{get;set;}
         public string ImageLink{get;set;}
         public bool Deleted{get;set;}
         public ISaveTool Save{get;set;}
